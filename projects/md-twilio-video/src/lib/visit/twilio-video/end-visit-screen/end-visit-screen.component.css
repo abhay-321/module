@@ -1,0 +1,36 @@
+.wrapper {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    background-color: var(--primary-color);
+  }
+
+  .visit-body{
+      color: #FFF;
+      width: 39.0625rem;
+      position: absolute;
+      left: 50%;
+      right: 50%;
+      transform: translateX(-50%);
+      /* background-color: gray; */
+      height: 100%;
+      text-align: center;
+  }
+
+
+  .detail{
+    position: absolute;
+    top: 6.75rem;
+    width: 100%;
+  }
+
+  .detail a{
+    color: white;
+  }
+  .detail h3, h4{
+      /* font-weight: 600; */
+      font-size: 1.8rem;
+  }

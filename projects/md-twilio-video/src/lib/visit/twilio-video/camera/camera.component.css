@@ -1,0 +1,11 @@
+#preview {
+  margin: 0 auto;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 5%;
+}
+
+div#preview video {
+  max-width: 100%;
+}

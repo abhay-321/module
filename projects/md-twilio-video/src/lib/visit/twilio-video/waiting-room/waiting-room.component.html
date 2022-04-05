@@ -1,0 +1,54 @@
+<div *ngIf="isWatingRoom" [hidden]="isAdmitOrDeny" class="wrapper">
+  <div class="preview" [class.d-none]="isCameraBlocked">
+    <lib-camera *ngIf="isCameraEnabled && !isCameraBlocked" #camera (deviceInitialized)="getDeviceInitResult($event)">
+    </lib-camera>
+    <lib-user-guidelines *ngIf="!isCameraEnabled && !isCameraBlocked" [showTooltip]="false"></lib-user-guidelines>
+  </div>
+
+
+  <div class="action-buttons" [class.d-none]="isCameraBlocked">
+    <ul class="call-items">
+      <li class="call-item">
+        <div class="initial-preview" *ngIf="!isCameraEnabled">
+          <span> 
+            <h3>GET READY!</h3><br>
+            Participants will be displayed here.</span>
+        </div>
+        <a *ngIf="!isCameraEnabled" class="a-play enable-camera-a" (click)="enableCamera()">
+          Enable Camera & Mic
+        </a>
+        <div *ngIf="isCameraEnabled && !isCameraBlocked && getLoader()">
+          <div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+        </div>
+        <div class="initial-preview" *ngIf="isCameraEnabled && !isCameraBlocked && !getLoader()">
+          <div class="avatar-circle" *ngFor="let i of participantsInitials">
+            <span class="initials">{{i}}</span>
+          </div>
+        </div>
+        <div class="initial-preview" *ngIf="isCameraEnabled && !isCameraBlocked && !getLoader()">
+          <div *ngFor="let i of participantsNames; let index =index;">
+            <span *ngIf="index == 0"> {{i}}</span>
+            <span *ngIf="index>0 && index < participantsNamesLength-1 && index<4 ">,&nbsp;{{i}}</span>
+            <span *ngIf="index != 0 && index < 4 && index == participantsNames.length-1">&nbsp;and {{i}} </span>
+          </div>
+          <span *ngIf="participantsNamesLength > 1 && participantsNamesLength < 5"> &nbsp; are in the call.</span>
+          <span class="no-one" *ngIf="participantsNamesLength==0">&nbsp;No one is in the call.</span>
+          <span *ngIf="participantsNamesLength==1">&nbsp;is in the call.</span>
+          <span *ngIf="participantsNamesLength> 4">&nbsp;and many more are in the call.</span>
+        </div>
+
+        <a *ngIf="isCameraEnabled && !isCameraBlocked" class="a-play enable-camera-a" (click)="joinAppointment()">
+          Join Appointment
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div>
+    <lib-webcam-blocked-steps *ngIf="isCameraBlocked"></lib-webcam-blocked-steps>
+  </div>
+</div>
+
+
+<div *ngIf="!isWatingRoom">
+  <lib-participants [parentData]="testData"></lib-participants>
+</div>

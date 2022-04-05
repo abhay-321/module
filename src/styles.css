@@ -1,0 +1,21 @@
+/* You can add global styles to this file, and also import other style files */
+:root {
+  --primary-color: #213F5F;
+  --background-color: #DAE6F3;
+  --secondary-color: #9EBEDE;
+  --button-color: #213F5F;
+  --button-text-color: #f8f8fd;
+}
+
+* {
+  font-family: 'Alegreya Sans',
+    sans-serif;
+  font-family: 'Lato',
+    sans-serif;
+  /* font-family: 'Nanum Myeongjo',
+    serif;
+  font-family: 'Open Sans',
+    sans-serif;
+  font-family: 'Staatliches',
+    cursive; */
+}

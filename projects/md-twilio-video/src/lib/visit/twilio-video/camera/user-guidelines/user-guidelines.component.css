@@ -1,0 +1,91 @@
+.enable-camera {
+  border: 2px solid;
+  height: 100%;
+  text-align: center;
+  background-color: var(--primary-color);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  border-radius: 2rem;
+}
+
+.webcam-icon {
+  height: auto;
+}
+
+.webcam-icon i {
+  color: var(--secondary-color);
+  font-size: 3rem;
+}
+
+.msg-container .msg-one {
+  color: #c3d6d6;
+  font-size: 1.5rem;
+}
+
+.msg-container .msg-two {
+  color: #c3d6d6;
+  font-size: 1rem;
+}
+
+.a-play {
+  border: 1px solid #ddd;
+  width: 265px;
+  height: 75px;
+  line-height: 75px;
+  border-radius: 90px;
+  display: inline-block;
+  font-size: 20px;
+  /* margin-right: 10px; */
+  background: white;
+  font-weight: 600;
+}
+
+.setting-tooltip {
+  width: 12rem;
+  height: 3rem;
+  background: #adb5bd;
+  position: absolute;
+  top: 12rem;
+  left: 19.5rem;
+  border-radius: 11px;
+}
+
+.setting-tooltip-safari {
+  width: 12rem;
+  height: 3rem;
+  background: #adb5bd;
+  position: absolute;
+  top: 10rem;
+  left: 36rem;
+  border-radius: 11px;
+}
+
+.setting-tooltip-firefox {
+  width: 12rem;
+  height: 3rem;
+  background: #adb5bd;
+  position: absolute;
+  top: 15rem;
+  left: 28.5rem;
+  border-radius: 11px;
+}
+
+.arrow-up {
+  position: absolute;
+  top: -1rem;
+  left: 5.5rem;
+  width: 0px;
+  height: 8px;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 8px solid #6e7a88;
+}
+
+.tooltip-text {
+  color: #e9ecef;
+  position: absolute;
+  top: 1.0rem;
+  left: 3.5rem;
+  font-size: 14px;
+}
